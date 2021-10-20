@@ -65,6 +65,41 @@ costumes.forEach(n => {
 // BONUS
 
 // Question 12A
-// const stephenKingMovies = ["The Shining", "Christine", "It", "The Mist", "Creepshow", "Pet Sematary] 
+const stephenKingMovies = [ "The Shining", "Christine", "It", "The Mist", "Creepshow", "Pet Sematary" ]
 
 // Question 12B
+const twoMovies = stephenKingMovies.filter(x => x.length == 9 )
+
+// Question 13A
+const halloweenSongs1 = ["Monster Mash", "Thriller"]
+
+// Question 13B
+const halloweenSongs2 = ["I Put A Spell On You", "This Is Halloween", "Ghostbusters"]
+
+// Question 13C
+halloweenJukeBox = (songs) => console.log(songs[Math.floor(Math.random()*songs.length)])
+
+// Question 13D
+halloweenJukeBox(halloweenSongs2)
+halloweenJukeBox(halloweenSongs1)
+
+// Question 14
+caps = (string) => {
+    let count = 0
+    let casedString = ""
+    for (letter of string) {
+        if ((letter.toLowerCase() == letter.toUpperCase())){
+            casedString += letter
+        }
+        else if (count % 2 == 0) {
+            casedString += letter.toUpperCase()
+            count++
+        }
+        else {
+            casedString += letter
+            count++
+        }
+        console.log(count)
+    }
+    return(casedString)
+}
